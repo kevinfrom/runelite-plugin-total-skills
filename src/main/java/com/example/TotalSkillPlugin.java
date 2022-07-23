@@ -1,7 +1,5 @@
 package com.example;
 
-import com.google.inject.Provides;
-
 import javax.inject.Inject;
 
 import lombok.extern.slf4j.Slf4j;
@@ -24,7 +22,7 @@ public class TotalSkillPlugin extends Plugin {
     @Subscribe
     public void onGameStateChanged(GameStateChanged gameStateChanged) {
         if (gameStateChanged.getGameState() == GameState.LOGGED_IN) {
-            client.addChatMessage(ChatMessageType.GAMEMESSAGE, "", "Your total level is " + client.getTotalLevel() , null);
+            client.addChatMessage(ChatMessageType.GAMEMESSAGE, "", "Your total level is " + client.getTotalLevel(), null);
         }
     }
 }
