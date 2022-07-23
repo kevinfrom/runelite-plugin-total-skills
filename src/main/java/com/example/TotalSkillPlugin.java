@@ -24,7 +24,7 @@ public class TotalSkillPlugin extends Plugin {
     @Subscribe
     public void onGameStateChanged(GameStateChanged gameStateChanged) {
         if (gameStateChanged.getGameState() == GameState.LOGGED_IN) {
-            client.addChatMessage(ChatMessageType.GAMEMESSAGE, "", "Example says " , null);
+            client.addChatMessage(ChatMessageType.GAMEMESSAGE, "", "Your total level is " + client.getTotalLevel() , null);
         }
     }
 }
